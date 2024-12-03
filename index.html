@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Criar um sistema que gerencie as notas dos alunos em diferentes diciplinas.
+    criar um array bidimensional que armazene as notas de 5 alunos em 3 diciplinas
+permitir que se escolha uma diciplina para calcular a média das notas dos alunos 
+usar switch case para mostrar o resultado da média em diferentes categorias : aprovado >=6 
+recuperação média entre 4 e 5.9
+reprovado média <4
+usar for para calcular  a média da diciplina escolhida 
+usaR WHILE para permitir que se escolha novamente uma diciplina -->
+<h1>Média dos alunos</h1>
+<input type="text" id="nome"> coloque seu nome aqui:</input>
+<select name="materias" id="materias">
+    <option value="lp" id="lp">lógica de programação</option>
+    <option value="matematica" id="matematica">matemática</option>
+    <option value="quimica" id="quimica">quimica</option>
+</select><br>
+<input type="number" id="b1"> 1 bimestre</input><br>
+<input type="number" id="b2"> 2 bimestre</input><br>
+<input type="number" id="b3"> 3 bimestre</input><br>
+
+<button onclick="calcularMedia()">calcular média</button>
+<script>
+    let materia = document.getElementById("materias").value;
+    function calcularMedia() {
+        let b1 =  Number(document.getElementById("b1").value);
+        let b2 = Number(document.getElementById("b2").value);
+        let b3 = Number(document.getElementById("b3").value);
+        let media = (b1+b2)+b3;
+        var media1 = media / 3; 
+
+        console.log(`sua média em ${materia} é de  ${media1}`);
+    }
+</script>
+</body>
+</html>
